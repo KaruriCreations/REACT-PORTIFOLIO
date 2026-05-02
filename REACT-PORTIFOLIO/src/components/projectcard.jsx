@@ -1,4 +1,5 @@
 export default function ProjectCard({project, handleDelete}){
+    
     return(
         <div className="project-card">
             <button className="delete-btn" onClick={() => handleDelete(project.id)}>✕</button>
@@ -8,4 +9,4 @@ export default function ProjectCard({project, handleDelete}){
             </div>
         </div>
     )
-}
+} 

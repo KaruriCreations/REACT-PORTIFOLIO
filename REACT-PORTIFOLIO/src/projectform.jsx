@@ -4,9 +4,9 @@ export default function ProjectForm({ projects, handleSubmit }) {
         <form onSubmit={handleSubmit} className="project-form">
             <p>Add Project</p>
             <label htmlFor="project-name">Title</label>
-            <input id="project-name" type="text" placeholder='' />
+            <input id="project-name" type="text" placeholder='' required/>
             <label htmlFor="project-description">Description</label>    
-            <textarea id="project-description" placeholder='' rows="4"></textarea>
+            <textarea id="project-description" placeholder='' rows="4" required></textarea>
             <button type='submit'>Add</button>
         </form>
     )

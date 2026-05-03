@@ -27,9 +27,10 @@ function App() {
             name: event.target.elements['project-name'].value,
             description: event.target.elements['project-description'].value
         }
+        //sets the project state to a new array and assigns a unique id
         setProjects(prevProjects => [
             ...prevProjects,
-            { id: projectInfo.name, ...projectInfo }
+            { id: prevProjects.length + 1, ...projectInfo }
         ])
         alert('Project added successfully!')
         event.target.reset()
@@ -44,6 +45,7 @@ function App() {
         setSearchTerm(event.target.value)
     }
 //ensure the case doesnt matter when seaching for projects and also checks both the name and description of the project for the search term
+    //this is basically a if/not function
     const displayedProjects = searchTerm
         ? projects.filter(project =>
             project.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
